@@ -1,0 +1,34 @@
+% !Mode:: "TeX:UTF-8"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%       Visão geral     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Visão Geral}
+
+O sistema de emissão de certificados digitais pessoa ICPEdu (Infraestrutura de Chaves Públicas para Ensino e Pesquisa) foi desenvolvido para gerenciar o ciclo de vida do certificado pessoa, desde de sua emissão à sua revogação e a manutenção da respectiva Lista de Certificados Revogados (LCR).
+
+O ciclo de vida do certificado digital tem início no momento da sua emissão. 
+A revogação de um certificado é iniciada quando as informações contidas no certificado não são mais válidas e/ou necessitam ser atualizadas. Dentre os motivos da revogação podemos citar:
+
+\begin{itemize}
+  \item Alteração de dados que identificam o proprietário do certificado;
+  \item Desvinculação do proprietário do certificado;
+  \item Desvinculação do proprietário do certificado com a entidade que o emitiu;
+  \item Atualização dos algoritmos criptográficos;
+\end{itemize}
+
+O final do processo de revogação do certificado digital é sua publicação na Lista de Certificados Revogados (LCR).
+
+Os usuários estão divididos em 3 perfis:
+
+\begin{itemize}
+  \item \textbf{Administrador}: responsável por criar os usuários, cadastrar módulos de segurança criptográficos, entre outras operações;
+  \item \textbf{Operador}: responsável pela operação da organização para a qual foi cadastrado.
+  \item \textbf{Usuário final}: responsável por solicitar e emitir seu certificado digital pessoal e solicitar a revogação do mesmo.
+\end{itemize}
+
+Por questões de segurança, foi observada a necessidade da criação de 3 usuários com privilégios distintos, separando o controle operacional do administrativo. Este Plano de Teste de Software tem o propósito de definir as atividades e procedimentos necessários para a validação dos requisitos definidos para o projeto ICPEdu. Além disso, faz-se necessário também a descrição dos testes do ponto de vista do usuário final do serviço, que corresponde ao terceiro e último perfil.
+
+O presente plano de testes pode ser aplicado em qualquer um dos ambientes implantados (Teste, Homologação e Produção). O resultado dos testes deve ser reportado para o gerente que solicitou a execução do plano de testes.
+
+
+\nocite{*}

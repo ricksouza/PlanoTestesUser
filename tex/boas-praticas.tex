@@ -1,0 +1,52 @@
+                  
+%TODO!Colocar uma introcucao no capitulo, explicando a necessidade de se tornar certos cuidados na operacao de softwares de ICP!%
+
+Este capítulo tem como objetivo apresentar os cuidados e práticas seguras de uso do software.
+
+\section{Práticas seguras e cuidados gerais}
+
+Nesta seção serão apresentados alguns cuidados gerais que devem se ter na instalação e configuração do sistema de emissão de certificados ICPEdu, bem como outros softwares e com a própria estação de trabalho do usuário.
+
+\subsection{Conexão HTTPS}
+
+A conexão HTTPS (\textit{HyperText Transfer Protocol Secure}) torna o uso do nosso software, e de outras aplicações web, mais seguro. Os dados da rede são transmitidos por uma conexão criptografada e também é possível verificar a autenticidade do servidor (aplicação web) através de certificados digitais.
+É recomendado o uso de conexão HTTPS para toda aplicação que possa executar operações críticas e/ou quando há o tráfego de informações sigilosas.
+
+Quando instalado a partir do gerenciador de aplicativos dos sistemas Debian (apt), como o Ubuntu, o sistema já é configurado para utilizar conexão HTTPS.
+
+\subsection{Permissões de diretórios}
+
+As permissões de diretórios e arquivos em sistemas Unix, quando utilizadas de maneira correta, tornam o sistema mais seguro. Portanto deve-se tomar um certo cuidado ao alterar as permissões, principalmente de áreas críticas do sistema.
+
+Quando instalado a partir do gerenciador de aplicativos dos sistemas Debian (apt), como o Ubuntu, o sistema já é configurado com as permissões corretas para o funcionamento do software.
+Não é recomendado a alteração destas permissões por usuários que não tenham familiaridade com sistemas Unix.
+Também não é recomendado o uso de permissões menos restritivas, como 777, pois podem colocar todo o sistema operacional em risco.
+
+\subsection{Escolha de senhas}
+
+O uso de \textit{login} e senha é o método mais utilizado para a autenticação em sistemas computacionais. A escolha de uma boa senha é fundamental para assegurar a segurança das contas dos usuários.
+Apesar da senha ser o ``cartão de entrada'' para a conta do usuário, muitos usuários não tomam o devido cuidado na hora de criar a senha.
+Muitos usuários optam por utilizar senhas fáceis de serem testadas e/ou adivinhadas, prejudicando a segurança de sua conta.
+
+Ao contrário de muitos sistemas, o sistema de emissão de certificados ICPEdu não impõe restrições na criação das senhas. Entretanto é recomendável que, ao criar uma senha, o usuário a faça  de uma forma que seja difícil para adivinhar, utilizando caracteres especiais, dígitos e letras maiúsculas de uma maneira aleatória.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%             Usuário Administrador                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Práticas seguras e cuidados do Administrador}
+
+Nesta seção serão apresentados alguns cuidados que o usuário administrador deve ter na utilização do sistema de emissão de certificados ICPEdu.
+
+
+\subsection{Backups}
+
+O processo de backup refere-se à cópia dos dados de um sistema computacional que permita a sua portarior restauração para o estado original do sistema. Backups são normalmente utilizados para os seguintes propósitos:
+
+\begin{itemize}
+ \item \textbf{Prevenção contra perda de dados}: No caso de uma queima de disco rígido, por exemplo, o backup pode ser utilizado para restaurar o sistema para o seu estado mais atual em uma nova estação de trabalho. 
+ \item \textbf{Voltar o sistema para um estado anterior}: No caso de alguma operação ter levado o sistema a um estado inválido, o backup pode ser utilizado para voltar o sistema a um estado válido.
+\end{itemize}
+
+É recomendado fazer backups do nosso sistema para prevenção contra perda de dados. Para voltar o sistema de emissão de certificados ICPEdu a um estado anterior, deve-se tomar muito cuidado com relação às operações que foram realizadas.
+O backup não deve ser utilizado para, por exemplo, desfazer a emissão incorreta de um certificado. Neste caso o certificado deve ser revogado e um novo certificado emitido.
+
